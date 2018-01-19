@@ -38,7 +38,8 @@
         android:layout_marginTop="@dimen/textMarginTopBetween"
         android:text="@string/address"
         android:textColor="@color/textColor"
-        android:textSize="@dimen/textSizeNormal" />
+        android:textSize="@dimen/textSizeNormal"
+        android:autoLink="map" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,7 +49,8 @@
         android:layout_marginTop="@dimen/textMarginTopBetween"
         android:text="@string/telephone"
         android:textColor="@color/textColor"
-        android:textSize="@dimen/textSizeNormal" />
+        android:textSize="@dimen/textSizeNormal"
+        android:autoLink="phone" />
 
     <TextView
         android:layout_width="wrap_content"
