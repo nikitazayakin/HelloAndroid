@@ -23,45 +23,85 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/textMarginLeft"
+        android:layout_marginLeft="@dimen/blockMarginLeft"
         android:layout_marginRight="@dimen/textMarginRight"
-        android:layout_marginTop="@dimen/textMarginTopBetween"
+        android:layout_marginTop="@dimen/blockMarginTopBetween"
         android:text="@string/company_name"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSizeTitle" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/textMarginLeft"
-        android:layout_marginRight="@dimen/textMarginRight"
-        android:layout_marginTop="@dimen/textMarginTopBetween"
-        android:text="@string/address"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSizeNormal"
-        android:autoLink="map" />
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/blockMarginTopBetween">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/textMarginLeft"
-        android:layout_marginRight="@dimen/textMarginRight"
-        android:layout_marginTop="@dimen/textMarginTopBetween"
-        android:text="@string/telephone"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSizeNormal"
-        android:autoLink="phone" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/imageMarginLeft"
+            android:src="@drawable/ic_location_on_black_24dp"/>
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/textMarginLeft"
+            android:layout_marginRight="@dimen/textMarginRight"
+
+            android:text="@string/address"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSizeNormal"
+            android:autoLink="map"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/blockMarginTopBetween">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/imageMarginLeft"
+            android:src="@drawable/ic_call_black_24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/textMarginLeft"
+            android:layout_marginRight="@dimen/textMarginRight"
+            android:text="@string/telephone"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSizeNormal"
+            android:autoLink="phone"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/blockMarginTopBetween"
+        android:layout_marginBottom="@dimen/textMarginBottom">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/imageMarginLeft"
+            android:src="@drawable/ic_public_black_24dp"/>
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/textMarginBottom"
         android:layout_marginLeft="@dimen/textMarginLeft"
         android:layout_marginRight="@dimen/textMarginRight"
-        android:layout_marginTop="@dimen/textMarginBottom"
         android:autoLink="web"
         android:text="@string/link"
         android:textColor="@color/linkColor"
-        android:textSize="@dimen/textSizeNormal" />
+        android:textSize="@dimen/textSizeNormal"
+        android:layout_gravity="center_vertical"/>
+    </LinearLayout>
 
 </LinearLayout>
