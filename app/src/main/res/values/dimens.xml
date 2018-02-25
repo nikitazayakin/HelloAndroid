@@ -8,4 +8,5 @@
     <dimen name="textSizeTitle">26sp</dimen>
     <dimen name="imageMarginLeft">16dp</dimen>
     <dimen name="blockMarginLeft">16dp</dimen>
+    <dimen name="imageMarginTop">16dp</dimen>
 </resources>
