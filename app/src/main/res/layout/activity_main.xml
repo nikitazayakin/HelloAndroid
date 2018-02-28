@@ -2,10 +2,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.helloandroid.MainActivity"
-    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:background="@color/backgroundColor"
+    tools:context="com.example.android.helloandroid.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,98 +17,71 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_below="@+id/textView"
+            android:layout_marginTop="@dimen/imageMarginTop"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_image"
-            android:layout_marginTop="@dimen/imageMarginTop"/>
+            android:src="@drawable/ic_image" />
 
         <!-- texts -->
-
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/blockMarginLeft"
-            android:layout_marginRight="@dimen/textMarginRight"
+            style="@style/TextViewStyle"
             android:layout_marginTop="@dimen/blockMarginTopBetween"
             android:text="@string/company_name"
-            android:textColor="@color/textColor"
             android:textSize="@dimen/textSizeTitle" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/blockMarginTopBetween">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/imageMarginLeft"
-                android:src="@drawable/ic_location_on_black_24dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/textMarginLeft"
-                android:layout_marginRight="@dimen/textMarginRight"
-
-                android:text="@string/address"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSizeNormal"
-                android:autoLink="map"
-                android:layout_gravity="center_vertical" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/blockMarginTopBetween">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/imageMarginLeft"
-                android:src="@drawable/ic_call_black_24dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/textMarginLeft"
-                android:layout_marginRight="@dimen/textMarginRight"
-                android:text="@string/telephone"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSizeNormal"
-                android:autoLink="phone"
-                android:layout_gravity="center_vertical" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="@dimen/blockMarginTopBetween"
-            android:layout_marginBottom="@dimen/textMarginBottom">
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/imageMarginLeft"
-                android:src="@drawable/ic_public_black_24dp"
-                android:layout_gravity="center_vertical" />
+                style="@style/IconImageStyle"
+                android:src="@drawable/ic_location_on_black_24dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/textMarginLeft"
-                android:layout_marginRight="@dimen/textMarginRight"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center_vertical"
+                android:autoLink="map"
+                android:text="@string/address"
+                android:textSize="@dimen/textSizeNormal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/blockMarginTopBetween"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/IconImageStyle"
+                android:src="@drawable/ic_call_black_24dp" />
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_gravity="center_vertical"
+                android:autoLink="phone"
+                android:text="@string/telephone"
+                android:textSize="@dimen/textSizeNormal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/textMarginBottom"
+            android:layout_marginTop="@dimen/blockMarginTopBetween"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/IconImageStyle"
+                android:src="@drawable/ic_public_black_24dp" />
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_gravity="center_vertical"
                 android:autoLink="web"
                 android:text="@string/link"
-                android:textColor="@color/linkColor"
-                android:textSize="@dimen/textSizeNormal"
-                android:layout_gravity="center_vertical" />
+                android:textSize="@dimen/textSizeNormal" />
         </LinearLayout>
 
     </LinearLayout>
